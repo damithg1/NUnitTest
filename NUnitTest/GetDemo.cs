@@ -5,7 +5,7 @@ using NUnit.Framework;
 using RestSharp;
 using Newtonsoft.Json;
 
-namespace YourNamespace
+namespace APIDemo
 {
     public class GetDemo
     {
@@ -118,7 +118,7 @@ namespace YourNamespace
             // Verify that the devices with the given name are found
             Assert.IsTrue(foundDevice.Count > 0, $"No devices found with the name '{deviceNameToSearch}'.");
 
-            // Perform additional assertions or actions with the found devices if needed
+            // Perform additional assertions or actions with the found devices
             foreach (GetDemo device in foundDevice)
             {
                 // Verify Capacity, and Screen size fields
@@ -131,7 +131,7 @@ namespace YourNamespace
         [Test]
         public void TestFilterRecordsByIdsUsingQueryParameter()
         {
-            // Add query parameter to filter by IDs (3, 4, and 5)
+            // Add query parameter to filter by IDs (3, 4, and 10)
             request.AddQueryParameter("id", "3,4,10");
 
             // Fetch and deserialize the devices data from the API

@@ -3,7 +3,7 @@ using NUnit.Framework;
 using RestSharp;
 using Newtonsoft.Json;
 
-namespace YourNamespace
+namespace APIDemo
 {
     public class PostDeviceData
     {
